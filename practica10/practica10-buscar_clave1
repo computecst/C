@@ -1,0 +1,12 @@
+Practica10
+
+Se busco la clave para el binario "dump_me32", con ayuda de la herramienta "gdb".
+
+Procedimiento:
+
+1-> gdb dump_me32
+2-> disas main
+3-> Se identifico la siguiente linea, 0x080484a3 <+40>:	cmpw    $0x545,%eax
+	La instrucción cmp indica comparación, por tanto se tomo como la pista principal, para encontrar la clave.
+4-> Convertir 0x545 --> 1349
+5-> se ejecuto el binario y se ingreso la clave: 1349 (clave correcta).
