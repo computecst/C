@@ -1,0 +1,32 @@
+Practica 11
+
+Objetivo: Obtener la contraseña del binario "help_me", por 2 métodos diferentes.
+
+Procedimiento:
+
+# Método 1 - herramienta Strings
+
+Paso1. strings help_me
+Paso2. se realizo un test antes de buscar la clave, se ingreso un password erróneo, para identificar el mensaje de error.
+Paso3. Se busca un linea de código donde puede estar la contraseña
+Paso4. Se identifico la contraseña en el sig. bloque de código:
+	QVh{
+	hola
+	mundf
+	repr
+	obadf
+	hola
+	 11g
+	[^_]
+	hola :)
+	OK! +1
+	reprobado
+Paso5. La contraseña correcta es:	hola :)
+
+# Método 2 - hexdump
+Paso1. ejecutamos el siguiente comando: hexdump -C help_me
+Paso2. identificamos la contraseña:		hola :)
+
+
+Bibliografia
+https://brundlelab.wordpress.com/2010/06/21/playing-with-gdb-reverse-engineer-your-way/
